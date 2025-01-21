@@ -27,6 +27,9 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
+app.get("/", (req, res) => {
+    res.status(200).json({ message: "Api is working" });
+  });
 // Routes
 // 1. Register
 app.post("/register", async (req, res) => {
